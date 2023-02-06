@@ -1,0 +1,9 @@
+package com.prog.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.prog.pojo.Bank;
+
+public interface EmpRepo extends JpaRepository<Bank, Integer>{
+
+}

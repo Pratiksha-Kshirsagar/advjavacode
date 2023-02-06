@@ -1,0 +1,26 @@
+package tester;
+
+import java.util.Scanner;
+import static utils.HibernateUtils.getFactory;
+import org.hibernate.SessionFactory;
+
+import DAL.CustomerOperations;
+import pojo.Customer;
+
+public class DetailById {
+
+	public static void main(String[] args) {
+		
+		try(SessionFactory sf = getFactory(); Scanner sc = new Scanner(System.in)){
+		CustomerOperations co = new CustomerOperations();
+		System.out.println("Enter ");
+		Customer c = co.getById(sc.nextLong());
+		System.out.println(c);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

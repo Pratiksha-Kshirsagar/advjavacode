@@ -1,0 +1,20 @@
+package pojo;
+
+public class customer {
+	private String name;
+	private int age;
+	private String city;
+	
+	public customer() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public customer(String name, int age, String city) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.city = city;
+	}
+	
+	
+}

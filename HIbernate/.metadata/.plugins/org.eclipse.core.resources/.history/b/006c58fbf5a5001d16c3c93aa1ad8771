@@ -1,0 +1,9 @@
+package com.prog.pojo;
+
+public class Bank {
+
+	private String bankname;
+	private String acctype;
+	private String branch
+	
+}

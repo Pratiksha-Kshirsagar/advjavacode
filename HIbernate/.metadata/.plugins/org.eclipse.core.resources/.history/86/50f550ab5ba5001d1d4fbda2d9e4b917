@@ -1,0 +1,16 @@
+package tester;
+
+import java.util.Scanner;
+
+public class AddCustomer {
+
+	public static void main(String[] args) {
+		try(Scanner sc = new Scanner(System.in); SessionFactory) {
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

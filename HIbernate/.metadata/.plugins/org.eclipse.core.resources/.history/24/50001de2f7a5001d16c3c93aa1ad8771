@@ -1,0 +1,15 @@
+package com.prog.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.prog.pojo.Bank;
+
+public class EmpService {
+
+	@Autowired
+	private EmpService repo;
+	
+	public void addbank(Bank b) {
+		repo.addbank(b);
+	}
+}

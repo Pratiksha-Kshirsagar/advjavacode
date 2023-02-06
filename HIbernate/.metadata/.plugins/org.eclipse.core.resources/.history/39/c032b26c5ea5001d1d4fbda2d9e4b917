@@ -1,0 +1,24 @@
+package tester;
+
+import org.hibernate.SessionFactory;
+
+import DAL.CustomerOperations;
+
+import static utils.HibernateUtils.getFactory;
+
+import java.util.List;
+public class ShowDetails {
+
+	public static void main(String[] args) {
+		try(SessionFactory sf = getFactory()) {
+			List<Customer> l
+			CustomerOperations co = new CustomerOperations();
+			co.showDetails();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

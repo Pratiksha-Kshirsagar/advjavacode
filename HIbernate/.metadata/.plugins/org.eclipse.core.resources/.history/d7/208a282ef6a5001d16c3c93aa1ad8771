@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>This is my HOME PAGE</h1>
+	    
+    <form action="register" method="post" style="margin: 10px;">
+        <input type="text" name="bname" id="bankname" placeholder="ENTER BANK NAME"> <br> <br>
+        <input type="text" name="acctype" id="acctype" placeholder="ENTER ACCOUNT TYPE"> <br> <br>
+        <input type="text" name="branch" id="branch" placeholder="ENTER BRANCH NAME"> <br> <br>
+        <button type="submit">SUBMIT</button>
+    </form>
+</body>
+</html>

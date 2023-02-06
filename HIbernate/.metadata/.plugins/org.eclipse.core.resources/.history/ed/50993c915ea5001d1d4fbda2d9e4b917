@@ -1,0 +1,27 @@
+package tester;
+
+import org.hibernate.SessionFactory;
+
+import DAL.CustomerOperations;
+import pojo.Customer;
+
+import static utils.HibernateUtils.getFactory;
+
+import java.util.ArrayList;
+import java.util.List;
+public class ShowDetails {
+
+	public static void main(String[] args) {
+		try(SessionFactory sf = getFactory()) {
+			
+			CustomerOperations co = new CustomerOperations();
+			List<Customer> list = co.showDetails();
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

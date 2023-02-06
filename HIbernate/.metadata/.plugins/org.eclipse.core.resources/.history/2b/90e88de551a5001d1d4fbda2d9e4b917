@@ -1,0 +1,9 @@
+package pojo;
+
+public class customer {
+	private String name;
+	private int age;
+	private String city;
+	
+	
+}

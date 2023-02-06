@@ -1,0 +1,26 @@
+package tester;
+
+import java.util.Scanner;
+import static utils.HibernateUtils.getFactory;
+import org.hibernate.SessionFactory;
+
+import DAL.CustomerOperations;
+import pojo.Customer;
+
+public class AddCustomer {
+
+	public static void main(String[] args) {
+		try(Scanner sc = new Scanner(System.in); SessionFactory sf = getFactory()) {
+			
+			System.out.println("Enter details name age city");
+			Customer c = new Customer(sc.next(), sc.nextInt(), sc.next());
+			CustomerOperations co = new CustomerOperations();
+			String s = co.addCustomer(c);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

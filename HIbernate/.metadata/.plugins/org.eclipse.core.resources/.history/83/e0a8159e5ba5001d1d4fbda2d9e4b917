@@ -1,0 +1,14 @@
+package tester;
+
+public class AddCustomer {
+
+	public static void main(String[] args) {
+		try(S) {
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

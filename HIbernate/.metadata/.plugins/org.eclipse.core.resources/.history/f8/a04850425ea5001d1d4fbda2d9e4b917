@@ -1,0 +1,16 @@
+package tester;
+
+import org.hibernate.SessionFactory;
+import static utils.HibernateUtils.getFactory;
+public class ShowDetails {
+
+	public static void main(String[] args) {
+		try(SessionFactory sf = getFactory()) {
+			
+		} catch (RuntimeException e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

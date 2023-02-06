@@ -1,0 +1,73 @@
+package DAL;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import static utils.HibernateUtils.getFactory;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import pojo.Customer;
+
+public class CustomerOperations {
+	public String addCustomer(Customer cust) {
+		String st = "Error";
+		Session s = getFactory().openSession();
+		Transaction tx = s.beginTransaction();
+		try {
+			
+			Long id = (Long)s.save(cust);
+			tx.commit();
+			
+			st = id+" DATA ADDED";
+			
+		} catch (RuntimeException e) {
+			if(tx!=null) {
+				tx.rollback();
+			}
+			throw e;
+		}
+		finally {
+			if (s != null)
+				s.close();
+		}
+		
+		return st;
+	}
+	
+	public List<Customer> showDetails() {
+		List<Customer> list = new ArrayList<Customer>();
+		Session s1 = getFactory().openSession();
+		Transaction tx1 = s1.beginTransaction();
+		String jpql = "Select e from Customer e";
+		try {
+			list = s1.createQuery(jpql, Customer.class).getResultList();
+			tx1.commit();
+			
+		} catch (RuntimeException e) {
+			if (tx1 != null)
+				tx1.rollback();
+			throw e;
+		}
+		finally {
+			if(s1 != null)
+				s1.close();
+		}
+		return list;
+	}
+	
+	public Customer getById(Long id) {
+		
+		Session s2 = getFactory().openSession();
+		Transaction tx2 = s2.beginTransaction();
+		
+		try {
+			
+		} catch (RuntimeException e) {
+			if(tx)
+		}
+		
+		return null;
+	}
+}

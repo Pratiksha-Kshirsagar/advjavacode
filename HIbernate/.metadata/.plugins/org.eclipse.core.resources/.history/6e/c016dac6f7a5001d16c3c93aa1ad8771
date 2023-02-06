@@ -1,0 +1,11 @@
+package com.prog.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class EmpService {
+
+	@Autowired
+	private EmpService repo;
+	
+	public String addbank
+}

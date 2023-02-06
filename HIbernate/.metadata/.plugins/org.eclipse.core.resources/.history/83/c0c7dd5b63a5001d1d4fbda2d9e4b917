@@ -1,0 +1,17 @@
+package tester;
+
+import org.hibernate.SessionFactory;
+
+public class DetailById {
+
+	public static void main(String[] args) {
+		try(SessionFactory sf = ){
+			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}
